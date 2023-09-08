@@ -15,6 +15,9 @@ const rl = readline.createInterface({
 // the function that will be called by the unit test below
 const rockPaperScissors = (hand1, hand2) => {
 
+  hand1 = hand1.trim().toLowerCase()
+  hand2 = hand2.trim().toLowerCase()
+
     if (hand1 === hand2) {
         return "It's a tie!"
     }
@@ -40,7 +43,7 @@ function getPrompt() {
       getPrompt();
     });
   });
-}
+} 
 
 // Unit Tests
 // to use them run the command: npm test main.js
@@ -69,5 +72,4 @@ if (typeof describe === 'function') {
 
   // always returns ask the user for another input
   getPrompt();
-
 }
